@@ -12,7 +12,7 @@ void combi(int n, vector<int> &sol, int len) {
         for (int i = 0; i < n; ++i)
             if (sol[i] == 1)
                 cout << i + 1 << " ";
-        cout << "./n";
+        cout << ".\n";
     }
 }
 
