@@ -22,7 +22,7 @@ void insertion_dc_2(vector<int> &a, int l, int r) {
         insertion_dc_2(a, l, r - 1);
         int tmp = a[r], i;
         for (i = r - 1; i >= l; --i) {
-            if (tmp > a[i])
+            if (tmp >= a[i])
                 break;
             a[i + 1] = a[i];
         }
