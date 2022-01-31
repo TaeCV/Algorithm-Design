@@ -9,10 +9,14 @@ int inversion(vector<int> &A, vector<int> &tmp, int start, int stop) {
         int c = m + 1;
         int ans = inversion(A, tmp, start, m) + inversion(A, tmp, m + 1, stop);
         for (int i = start; i <= stop; ++i) {
-            while (b > m && i <= stop)
-                tmp[i++] = A[c++];
-            while (c > stop && i <= stop)
-                tmp[i++] = A[b++];
+            if (b > m) {
+                tmp[i] = A[c++];
+                continue;
+            }
+            if (c > stop) {
+                tmp[i] = A[b++];
+                continue;
+            }
             if (A[b] > A[c]) {
                 ans += (m - b) + 1;
                 tmp[i] = A[c++];
