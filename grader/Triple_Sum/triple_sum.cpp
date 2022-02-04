@@ -18,8 +18,6 @@ bool bs(vector<int> &A, int l, int r, int val) {
 bool triple(vector<int> &A, int q, int n) {
     int remain;
     for (int i = 0; i < n - 1; ++i) {
-        if (q < A[i])
-            return false;
         for (int j = i + 1; j < n; ++j) {
             remain = q - A[i] - A[j];
             if (remain < A[j])
