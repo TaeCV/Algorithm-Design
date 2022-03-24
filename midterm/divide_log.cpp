@@ -11,10 +11,7 @@ int main() {
     for (int i = 1; i <= n; ++i) {
         M[i] = P[i];
         for (int j = 1; j < i; ++j)
-            M[i] = max(M[i], M[j] + M[i - j]);
+            M[i] = max(M[i], M[j] + P[i - j]);
     }
-    for (int i = 1; i <= n; ++i)
-        cout << M[i] << " ";
-    cout << "\n";
     cout << M[n];
 }
