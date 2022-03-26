@@ -44,10 +44,5 @@ int main() {
                 ans = min(ans, dist[x][y]);
         }
     }
-    for (int i = mnX; i <= mxX; ++i) {
-        for (int j = mnY; j <= mxY; ++j)
-            cout << dist[i][j] << " ";
-        cout << "\n";
-    }
     cout << ans;
 }
