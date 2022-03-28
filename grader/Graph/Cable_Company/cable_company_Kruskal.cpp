@@ -10,7 +10,7 @@ vector<int> P, H;
 int findSet(int u) {
     if (u == P[u])
         return u;
-    return findSet(P[u]);
+    return P[u] = findSet(P[u]);
 }
 
 void unionSet(int u, int v) {
